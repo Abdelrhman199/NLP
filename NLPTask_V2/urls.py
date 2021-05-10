@@ -1,4 +1,3 @@
-
 """NLPTask_V2 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -16,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from trigram.views import countWord
+from trigram.views import index, generate_trigram
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('count/', countWord)
+    path('trigram/', index),
+    path('get-suggestions/', generate_trigram)
 ]
